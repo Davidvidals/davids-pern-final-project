@@ -4,7 +4,7 @@ const db = require("../db/dbConfig.js");
 const getAllFunkos = async()=>{
     try{
         const allFunkos = await db.any("SELECT * FROM funkos");
-        return allFunkos
+        return allFunkos;
     }catch(err){
         return err;
     }

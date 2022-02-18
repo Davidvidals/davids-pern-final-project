@@ -5,7 +5,7 @@ CREATE DATABASE cta_dev;
 
 DROP TABLE IF EXISTS funkos ;
 
-CREATE TABLE test (
+CREATE TABLE funkos (
     id SERIAL PRIMARY KEY, 
     name TEXT,
     price INT,
