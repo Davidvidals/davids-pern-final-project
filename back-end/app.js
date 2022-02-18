@@ -1,9 +1,10 @@
 // DEPENDENCIES
-const cors = require("cors");
 const express = require("express");
 const funkoController = require("./controllers/funkoController.js")
+
 // CONFIGURATION
 const app = express();
+const cors = require("cors");
 
 // MIDDLEWARE
 app.use(cors());

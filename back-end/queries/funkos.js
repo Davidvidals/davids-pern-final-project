@@ -23,7 +23,7 @@ const getOneFunko = async(id)=>{
 //CREATE
 const createFunko = async(funko)=>{
     try{
-        const newFunko = await db.one("INSERT INTO funkos(name, price, edition, image) VALUES ($1,$2,$3,$4) RETURNING *", [funko.name , funko.price,funko.edition, funko.image])
+        const newFunko = await db.one("INSERT INTO funkos(name, price, edition, image, featured) VALUES ($1,$2,$3,$4,$5) RETURNING *", [funko.name , funko.price,funko.edition, funko.image])
     }catch(err){
         return err;
     }
@@ -43,8 +43,8 @@ const deleteFunko = async(id)=>{
 const updateFunko = async(id, funko)=>{
     try{
         const updatedFunko = await db.one(
-            "UPDATED funkos SET name=$1, price = $2, edition=$3, image=$4 WHERE id = $5 RETURNING *",
-            [funko.name, funko.price, funko.edition, funko.image, id]
+            "UPDATED funkos SET name=$1, price = $2, edition=$3, image=$4 featured=$5 WHERE id = $6 RETURNING *",
+            [funko.name, funko.price, funko.edition, funko.image,funko.featured, id]
         );
         return updatedFunko;
     }catch(err){
