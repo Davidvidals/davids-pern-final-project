@@ -1,6 +1,6 @@
 \c cta_dev;
 
-INSERT INTO test (name, price, edition ,image) VALUES
+INSERT INTO funkos (name, price, edition ,image) VALUES
 ('Death Note Ryuk POP! Vinyl Figure', 100, 'Anime', "https://sc04.alicdn.com/kf/H6f2f78eda13744d6922bca0330fd1c6b7.jpg" ),
 ('Death Note Light POP! Vinyl Figure', 90, 'Anime', "https://www.pngitem.com/pimgs/m/262-2623089_transparent-death-note-ryuk-png-funko-pop-death.png" ),
 ('Spider-Girl POP! Vinyl Figure', 15, "Comics" , "https://static.thcdn.com/images/large/original//productimg/1600/1600/13033803-1994882971506697.jpg"),

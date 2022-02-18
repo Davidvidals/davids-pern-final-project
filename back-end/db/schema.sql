@@ -3,7 +3,7 @@ CREATE DATABASE cta_dev;
 
 \c cta_dev;
 
-DROP TABLE IF EXISTS test;
+DROP TABLE IF EXISTS funkos ;
 
 CREATE TABLE test (
     id SERIAL PRIMARY KEY, 
