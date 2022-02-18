@@ -7,5 +7,8 @@ DROP TABLE IF EXISTS test;
 
 CREATE TABLE test (
     id SERIAL PRIMARY KEY, 
-    name TEXT
+    name TEXT,
+    price INT,
+    edition TEXT,
+    image TEXT
 );
