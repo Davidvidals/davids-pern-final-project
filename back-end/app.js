@@ -10,10 +10,6 @@ app.use(cors());
 app.use(express.json()); // Parse incoming JSON
 app.use('/funkos',funkoController)
 // ROUTES
-app.get("/", (req, res) => {
-  res.send("Hello, world!");
-});
-
 app.get('/', (req,res)=>{
   res.send("Welcome to Funko World")
 });
