@@ -15,7 +15,7 @@ app.get('/', (req,res)=>{
 });
 
 app.get('*',(req,res)=>{
-  res.status(404).send('Page Not Found')
+  req.status(404).send('Page Not Found')
 })
 
 // EXPORT
