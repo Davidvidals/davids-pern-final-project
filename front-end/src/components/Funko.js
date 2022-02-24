@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import '../css/card.css'
+import Featured from "./Featured";
 
 function Funko({funko}){
     return(
@@ -8,22 +9,22 @@ function Funko({funko}){
 
                 <div className="card_head">
                     <div className="card_image">
-                    <Link to = {`/funkos/${funko.id}`}>
+                    {/* <Link to = {`/funkos/${funko.id}`}> */}
                     <div class="image-wrapper">
                     <div class="media">
                     <div class="overlay"></div>
-                    <Link to = {`/funkos/${funko.id}`}><img src={funko.image} alt={funko.name}/></Link>
+                    <Link to = {`/funkos/${funko.id}`}><img src={funko.image} alt={funko.name}/><Featured featured={funko.featured}/></Link>
                     <div class="image-details">
                     <Link to = {`/funkos/${funko.id}`}><p>{funko.name}</p></Link>
                     </div>
                     </div>
                     </div>
-                    </Link>
+                    {/* </Link> */}
                     </div>
                 </div>
 
                 <div className="card_body">
-
+                    {funko.description}
                 </div>
                 <div className="wrapper">
                     <div className="card_price">

@@ -10,7 +10,9 @@ function NewFunkoForm(){
         name: '',
         price: 0 ,
         edition: '',
-        image: ''
+        image: '',
+        description:'',
+        featured: false
     });
 
     const addSnack =()=>{
@@ -73,6 +75,24 @@ function NewFunkoForm(){
                     type='text'
                     onChange={handleTextChange}
                     placeholder='http://'
+                    className='user-input'
+                />
+                <label htmlFor='description'>Description:</label>
+                    <input
+                    id='description'
+                    value={funko.description}
+                    type='text'
+                    onChange={handleTextChange}
+                    placeholder='Description'
+                    className='user-input'
+                />
+                  <label htmlFor='featured'>Featured:</label>
+                    <input
+                    id='featured'
+                    value={funko.featured}
+                    type='text'
+                    onChange={handleTextChange}
+                    placeholder='Featured'
                     className='user-input'
                 />
 

@@ -2,6 +2,7 @@ import { useState , useEffect } from "react";
 import {Link ,  useNavigate , useParams} from "react-router-dom";
 import axios from "axios";
 import '../css/details.css'
+
 const API = process.env.REACT_APP_API_URL;
 
 function FunkoDetails(){
@@ -29,9 +30,10 @@ function FunkoDetails(){
     return(
         <div>
             <div>
+                
                 <h2>{funko.name}</h2>
                 <img src={funko.image} alt={funko.name} />
-                <h3>Price:${funko.price}</h3>
+                <h3>Price:${funko.price}.00</h3>
                 <h3>Edition: {funko.edition}</h3>
             </div>
 
