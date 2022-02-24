@@ -1,3 +1,7 @@
+# Deployed Links
+ - Heroku : https://dv-cta-be.herokuapp.com/
+ - Netlify : https://stoic-hypatia-7c3b05.netlify.app
+
 # PERN Final Project Template
 
 - select `use this template`
