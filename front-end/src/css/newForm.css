@@ -1,0 +1,45 @@
+:root{
+    --tan: rgb(241, 222, 222);
+    --purple: rgb(187, 172, 193);
+    --dark-purple: rgb(128, 114, 123);
+    --light-green:rgb(144, 149, 128);
+    --dark-green: rgb(84, 86, 67);
+}
+
+.user-input {
+    color:black;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: transparent;
+    border:2px solid var(--light-green);
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+  }
+  
+  .user-input:focus { border:2px solid var(--dark-green); }
+  
+  textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+  }
+  
+  [type="submit"] {
+    width: 100%;
+    background:var(--purple);
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:var(--tan);
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+  }
+  [type="submit"]:hover { background:var(--dark-purple); }

@@ -1,8 +1,11 @@
+import '../css/home.css'
+
 function Home() {
     return (
-      <div>
-        <h2>Welcome</h2>
-       
+      <div class="type_wrapper">
+          <div class="typing-demo">
+            WELCOME TO FUNKO WORLD!
+          </div>
       </div>
     );
   }

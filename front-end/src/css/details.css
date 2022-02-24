@@ -1,0 +1,32 @@
+:root{
+    --tan: rgb(241, 222, 222);
+    --purple: rgb(187, 172, 193);
+    --dark-purple: rgb(128, 114, 123);
+    --light-green:rgb(144, 149, 128);
+    --dark-green: rgb(84, 86, 67);
+}
+
+.navigation {
+    filter: drop-shadow(3px 10px 15px rgba(0, 0, 0, 0.45));
+  }
+.navigation button{
+    height: 50px;
+    width: 100px;
+    background: linear-gradient(to bottom, var(--light-green), var(--dark-green));
+    font-weight: bold;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    margin: 15px; 
+    padding: 0;
+
+  }
+button:hover{
+    cursor: pointer;
+    filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.45));
+  }
+button:active{
+    filter: none;
+    transform: scale(.95);
+  }
+

@@ -1,11 +1,11 @@
-import NewFunko from '../components/FunkoNewForm';
+import NewFunkoForm from '../components/FunkoNewForm';
 
-function New(){
+function NewFunko(){
     return(
         <div>
-            <NewFunko/>
+            <NewFunkoForm/>
         </div>
     )
 }
 
-export default New;
+export default NewFunko;

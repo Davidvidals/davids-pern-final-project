@@ -1,0 +1,146 @@
+:root{
+    --tan: rgb(241, 222, 222);
+    --purple: rgb(187, 172, 193);
+    --dark-purple: rgb(128, 114, 123);
+    --light-green:rgb(144, 149, 128);
+    --dark-green: rgb(84, 86, 67);
+}
+
+
+*{
+    margin :0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "outfit", sans-serif;
+}
+
+body{
+    background: var(--tan);
+    min-height: 100vh;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.card{
+    background: var(--purple);
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 20px 25px 15px rgba(0,0,0,0.05,
+                0px, 40px,30px,15px rgba(0,0,0,0.1));
+   
+}
+
+
+.card_body{
+    padding: 0px 0px;
+    border-bottom: 2px solid var(--dark-purple);
+    margin-bottom: 5px;
+}
+
+.card_title{
+    color: var(--dark-green);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.card_body .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_price,
+.card_edition{
+display: flex;
+align-items: center;
+font-weight: 500;
+}
+
+.card_price{
+    color: rgb(84, 86, 67);
+}
+.card_edition{
+    color: var(--dark-green);
+}
+
+
+  h1 {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .image-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  
+  .media {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .media:hover {
+    cursor: pointer;
+  }
+  
+
+  img {
+    width: 100%;
+    z-index: -1;
+    margin: auto;
+    transform: scale(1);
+    transition: all ease-in-out 0.5s;
+  }
+  
+  .media:hover img {
+    filter: blur(2px);
+  }
+  
+  .image-details {
+      font-weight: 500;
+    text-align: center;
+    font-size: 20px;
+    /* z-index: 4; */
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+  }
+  
+  .media:hover .image-details {
+    top: 40%;
+    opacity: 50;
+    background: var(--purple);
+  }
+  
+  @media only screen and (max-width: 2000px) {
+    .media {
+      width: 70%;
+      height: 70%;
+    }
+  }
+
+  .container{
+      display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+
+  }

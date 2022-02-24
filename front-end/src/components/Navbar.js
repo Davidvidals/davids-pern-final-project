@@ -1,19 +1,20 @@
 import {Link} from "react-router-dom";
+import '../css/navbar.css'
 
 function Navbar(){
     return(
         <nav>
             <ul>
                 <li>
-                    <Link to='/'>HOME</Link>
+                   <Link to='/'><button className="button">HOME</button></Link> 
                 </li>
 
                 <li>
-                    <Link to='/funkos/new'>NEW</Link>
+                    <Link to='/funkos/new'><button className="button">NEW</button></Link>
                 </li>
 
                 <li>
-                    <Link to='/funkos'>FUNKOS</Link>
+                    <Link to='/funkos'><button className="button">FUNKOS</button></Link>
                 </li>
             </ul>
         </nav>

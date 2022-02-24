@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
-
+import '../css/newForm.css'
 const API = process.env.REACT_APP_API_URL
 
 function EditFunko(){
@@ -43,6 +43,7 @@ function EditFunko(){
                     type='text'
                     onChange={handleTextChange}
                     placeholder='Name of POP!'
+                    className='user-input'
                 />
                 
                 <label htmlFor='price'>Price:</label>
@@ -52,6 +53,7 @@ function EditFunko(){
                     type='number'
                     onChange={handleTextChange}
                     placeholder=''
+                    className='user-input'
                 />
 
                 <label htmlFor='edition'></label>
@@ -61,6 +63,7 @@ function EditFunko(){
                     type='text'
                     onChange={handleTextChange}
                     placeholder='Edition'
+                    className='user-input'
                 />
 
                 <label htmlFor='image'>Image:</label>
@@ -71,6 +74,7 @@ function EditFunko(){
                     onChange={handleTextChange}
                     placeholder='http://'
                     pattern='http[s]*://.+'
+                    className='user-input'
                 />
 
                 <input type = 'submit' />

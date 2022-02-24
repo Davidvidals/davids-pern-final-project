@@ -1,10 +1,10 @@
 import axios from 'axios';
 import {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import '../css/newForm.css'
 const API = process.env.REACT_APP_API_URL;
 
-function NewFunko(){
+function NewFunkoForm(){
     let navigate = useNavigate();
     const[funko,setFunko]= useState({
         name: '',
@@ -35,7 +35,7 @@ function NewFunko(){
 
     return(
         <div className='new'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='form'>
                 <label htmlFor='name'>Name:</label>
                     <input
                     id='name'
@@ -43,6 +43,7 @@ function NewFunko(){
                     type='text'
                     onChange={handleTextChange}
                     placeholder='Name of POP!'
+                    className='user-input'
                 />
                 
                 <label htmlFor='price'>Price:</label>
@@ -52,6 +53,7 @@ function NewFunko(){
                     type='number'
                     onChange={handleTextChange}
                     placeholder=''
+                    className='user-input'
                 />
 
                 <label htmlFor='edition'></label>
@@ -61,6 +63,7 @@ function NewFunko(){
                     type='text'
                     onChange={handleTextChange}
                     placeholder='Edition'
+                    className='user-input'
                 />
 
                 <label htmlFor='image'>Image:</label>
@@ -70,14 +73,14 @@ function NewFunko(){
                     type='text'
                     onChange={handleTextChange}
                     placeholder='http://'
-                    pattern='http[s]*://.+'
+                    className='user-input'
                 />
 
-                <input type = 'submit' />
+                <input type = 'submit' onSubmit={handleSubmit}/>
      
             </form>
         </div>
     )
 }
 
-export default NewFunko;
+export default NewFunkoForm;

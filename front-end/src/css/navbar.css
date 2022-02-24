@@ -1,0 +1,59 @@
+:root{
+    --tan: rgb(241, 222, 222);
+    --purple: rgb(187, 172, 193);
+    --dark-purple: rgb(128, 114, 123);
+    --light-green:rgb(144, 149, 128);
+    --dark-green: rgb(84, 86, 67);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+li{
+    padding: 10px;
+}
+
+
+   .button {
+	background: linear-gradient(to right, rgb(187, 172, 193), rgb(128, 114, 123));
+	color: var(--tan);
+	--width: 200px;
+	--height: calc(var(--width) / 4);
+	width: var(--width);
+	height: var(--height);
+	text-align: center;
+	line-height: var(--height);
+	font-size: calc(var(--height) / 2);
+	/* font-family: sans-serif; */
+	/* letter-spacing: 0.2em; */
+	border: 1px solid var(--light-green);
+	border-radius: 2em;
+	transform: perspective(500px) rotateY(-15deg);
+	text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
+	transition: 0.5s;
+	position: relative;
+	overflow: hidden;
+}
+
+.button:hover {
+	transform: perspective(500px) rotateY(15deg);
+	text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.button::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, transparent, white, transparent);
+	left: -100%;
+	transition: 0.5s;
+}
+
+.button:hover::before {
+	left: 100%;
+}
