@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import '../css/newForm.css'
+import { Link } from 'react-router-dom';
 const API = process.env.REACT_APP_API_URL
 
 function EditFunko(){
@@ -96,6 +97,11 @@ function EditFunko(){
                 />
 
                 <input type = 'submit' />
+                <div>
+                    <Link to={'/funkos'}>
+                        <button className="nav_button">BACK</button>
+                    </Link>
+                </div>
      
             </form>
         </div>
