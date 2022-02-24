@@ -2,7 +2,7 @@ import axios from 'axios';
 import {useState, useEffect} from 'react';
 import Funko from './Funko';
 
-const API = Process.env.REACT_APP_API_URL;
+const API = process.env.REACT_APP_API_URL;
 
 function AllFunkos(){
     const [funko, setFunkos] = useState([]);
@@ -18,7 +18,7 @@ function AllFunkos(){
     return(
         <div>
             {funko.map((funko)=>{
-                return <Funko key={funko.id} funko={funko}/>
+                return <Funko key={funko.index} funko={funko}/>
             })}
         </div>
     )

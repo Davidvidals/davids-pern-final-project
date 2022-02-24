@@ -21,7 +21,7 @@ function EditFunko(){
     },[index])
 
     const handleTextChange = (event) =>{
-        setFunko({ ...funko, [event.target.id]: event .target.value});
+        setFunko({ ...funko, [event.target.id]: event.target.value});
     };
 
     const handleSubmit = (event) =>{

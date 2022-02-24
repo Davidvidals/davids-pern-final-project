@@ -6,20 +6,20 @@ const API = process.env.REACT_APP_API_URL;
 
 function FunkoDetails(){
     const [funko, setFunko] = useState({});
-    let {index} = useParams();
+    let {id} = useParams();
     let navigate = useNavigate();
 
     useEffect(()=>{
-        axios.get(API + '/funkos/' + index)
+        axios.get(API + '/funkos/' + id)
         .then((res)=>{
             setFunko(res.data);
         }).catch((err)=>{
             console.log(err)
         })
-    }, [index]);
+    }, [id]);
 
     const handleDelete=()=>{
-        axios.delete(API + '/funkos/' + index)
+        axios.delete(API + '/funkos/' + id)
         .then((res)=>{
             navigate('/funkos')
         }).catch((err)=>{
