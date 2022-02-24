@@ -1,6 +1,11 @@
-DROP TABLE IF EXISTS test;
+DROP TABLE IF EXISTS funkos ;
 
-CREATE TABLE test (
+CREATE TABLE funkos (
     id SERIAL PRIMARY KEY, 
-    name TEXT
+    name TEXT,
+    price INT,
+    edition TEXT,
+    image TEXT,
+    description TEXT,
+    featured BOOLEAN
 );
