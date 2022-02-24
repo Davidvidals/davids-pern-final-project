@@ -10,6 +10,5 @@ CREATE TABLE funkos (
     name TEXT,
     price INT,
     edition TEXT,
-    image TEXT,
-    featured BOOLEAN
+    image TEXT
 );
