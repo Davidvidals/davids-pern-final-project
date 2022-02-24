@@ -7,6 +7,7 @@ import NewFunko from "./pages/NewFunko";
 import Show from './pages/ShowFunko'
 import Navbar from './components/Navbar'
 
+
 function App(){
   return(
     <Router>
@@ -18,6 +19,7 @@ function App(){
           <Route path ='/funkos/new' element={<NewFunko/>}/>
           <Route path ='/funkos/:index' element ={<Show/>}/>
           <Route path ='/funkos/:index/edit' element={<Edit/>}/>
+
         </Routes>
       </main>
     </Router>
