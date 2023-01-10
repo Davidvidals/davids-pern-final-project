@@ -29,31 +29,43 @@ function FunkoDetails(){
     }
     return(
         <div>
-            <div>
-                
-                <h2>{funko.name}</h2>
-                <img src={funko.image} alt={funko.name} />
-                <h3>Price:${funko.price}.00</h3>
-                <h3>Edition: {funko.edition}</h3>
-            </div>
-
-            <div className='navigation'>
-                <div>
-                    <Link to={'/funkos'}>
-                        <button className="nav_button">BACK</button>
-                    </Link>
+            <section id="product-info">
+                <div class="item-image-parent">
+                    <div class="item-image-main">
+                    <img src={funko.image} alt={funko.name}/>
+                    </div>
                 </div>
 
-                <div>
-                    <Link to={`/funkos/${funko.id}/edit`}>
-                        <button className="nav_button">EDIT</button>
-                    </Link>
+                <div class="item-info-parent">
+                    <div class="main-info">
+                    <h4 className="product-title">{funko.name}</h4>
+                        <div class="star-rating">
+                            <span>★★★★</span>★            
+                        </div>
+                        <p>Price:<span id="price"> ${funko.price}.00</span></p>
+                    </div>
+
+                 <div className='navigation'>
+                    <div>
+                        <Link to={'/funkos'}>
+                            <button className="nav_button">BACK</button>
+                        </Link>
+                    </div>
+
+                    <div>
+                        <Link to={`/funkos/${funko.id}/edit`}>
+                            <button className="nav_button">EDIT</button>
+                        </Link>
+                    </div>
+
+                    {/* <div>
+                        <button onClick={handleDelete} className="nav_button">DELETE</button>
+                    </div> */}
+                </div>
                 </div>
 
-                <div>
-                    <button onClick={handleDelete} className="nav_button">DELETE</button>
-                </div>
-            </div>
+
+            </section>
         </div>
     )
 }

@@ -1,45 +1,63 @@
-:root{
-    --tan: rgb(241, 222, 222);
-    --purple: rgb(187, 172, 193);
-    --dark-purple: rgb(128, 114, 123);
-    --light-green:rgb(144, 149, 128);
-    --dark-green: rgb(84, 86, 67);
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 180px;
 }
 
-.user-input {
-    color:black;
-    font-weight:500;
-    font-size: 18px;
-    border-radius: 5px;
-    background-color: transparent;
-    border:2px solid var(--light-green);
-    padding: 13px;
-    margin-bottom: 15px;
-    width:100%;
-    box-sizing: border-box;
-    outline:0;
-  }
-  
-  .user-input:focus { border:2px solid var(--dark-green); }
-  
-  textarea {
-    height: 150px;
-    line-height: 150%;
-    resize:vertical;
-  }
-  
-  [type="submit"] {
-    width: 100%;
-    background:var(--purple);
-    border-radius:5px;
-    border:0;
-    cursor:pointer;
-    color:var(--tan);
-    font-size:24px;
-    padding-top:10px;
-    padding-bottom:10px;
-    transition: all 0.3s;
-    margin-top:-4px;
-    font-weight:700;
-  }
-  [type="submit"]:hover { background:var(--dark-purple); }
+.form__field {
+  font-family: inherit;
+  width: 200%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 20px;
+  color: black;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38caef;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}

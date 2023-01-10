@@ -37,64 +37,42 @@ function NewFunkoForm(){
 
     return(
         <div className='new'>
+            
+
             <form onSubmit={handleSubmit} className='form'>
-                <label htmlFor='name'>Name:</label>
-                    <input
-                    id='name'
-                    value={funko.name}
-                    type='text'
-                    onChange={handleTextChange}
-                    placeholder='Name of POP!'
-                    className='user-input'
-                />
-                
-                <label htmlFor='price'>Price:</label>
-                    <input
-                    id='price'
-                    value={funko.price}
-                    type='number'
-                    onChange={handleTextChange}
-                    placeholder=''
-                    className='user-input'
-                />
 
-                <label htmlFor='edition'></label>
-                    <input
-                    id='edition'
-                    value={funko.edition}
-                    type='text'
-                    onChange={handleTextChange}
-                    placeholder='Edition'
-                    className='user-input'
-                />
 
-                <label htmlFor='image'>Image:</label>
-                    <input
-                    id='image'
-                    value={funko.image}
-                    type='text'
-                    onChange={handleTextChange}
-                    placeholder='http://'
-                    className='user-input'
-                />
-                <label htmlFor='description'>Description:</label>
-                    <input
-                    id='description'
-                    value={funko.description}
-                    type='text'
-                    onChange={handleTextChange}
-                    placeholder='Description'
-                    className='user-input'
-                />
-                  <label htmlFor='featured'>Featured:</label>
-                    <input
-                    id='featured'
-                    value={funko.featured}
-                    type='text'
-                    onChange={handleTextChange}
-                    placeholder='Featured'
-                    className='user-input'
-                />
+            <div class="form__group field">
+                <input  placeholder="name" class="form__field" type="input" onChange={handleTextChange}  id='name' value={funko.name}/>
+                <label class="form__label" htmlfor="name">Funko Pop Name</label>
+            </div>
+
+
+            <div class="form__group field">
+                <input  placeholder="price" class="form__field" type="input" onChange={handleTextChange}  id='price' value={funko.price}/>
+                <label class="form__label" htmlfor="price">Price</label>
+            </div>
+
+            <div class="form__group field">
+                <input  placeholder="edition" class="form__field" type="input" onChange={handleTextChange}  id='edition' value={funko.edition}/>
+                <label class="form__label" htmlfor="edition">Edition</label>
+            </div>
+
+            <div class="form__group field">
+                <input  placeholder="image" class="form__field" type="file" onChange={handleTextChange}  id='image' value={funko.image}/>
+                <label class="form__label" htmlfor="image">Image</label>
+            </div>
+            
+            <div class="form__group field">
+                <input  placeholder="description" class="form__field" type="input" onChange={handleTextChange}  id='description' value={funko.description}/>
+                <label class="form__label" htmlfor="description">Description</label>
+            </div>
+ 
+            <div class="form__group field">
+                <input  placeholder="featured" class="form__field" type="input" onChange={handleTextChange}  id='featured' value={funko.featured}/>
+                <label class="form__label" htmlfor="featured">Featured</label>
+            </div>
+
 
                 <input type = 'submit' onSubmit={handleSubmit}/>
      
